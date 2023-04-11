@@ -14,6 +14,7 @@ body {
 }
 
 
+
 .setting-toggle {
     position: fixed;
     top: 65px;
@@ -213,6 +214,7 @@ body {
 
 #section {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 p {
@@ -226,8 +228,10 @@ h5 {
 }
 
 h6 {
+    font-size: 18px;
     color: #ffffff;
 }
+
 
 .head-text h1 {
     color: white;
@@ -244,6 +248,17 @@ h6 {
     position: relative;
 }
 
+
+.video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.3);
+    z-index: -1;
+}
 
 .right-side {
     width: 100%;
@@ -293,7 +308,7 @@ h6 {
 }
 
 .header span {
-    color: white;
+    color: white !important;
     font-size: 15px;
     text-align: end;
 }
@@ -365,14 +380,10 @@ h6 {
     transition: 0.5s;
 }
 
-.social-media i {
-    color: #9f9393;
+.social-media i.active {
     font-size: 25px;
 }
 
-.social-media li i:hover {
-    color: #28e98c;
-}
 
 
 .social-media li:hover {
@@ -430,14 +441,17 @@ h6 {
     position: relative;
 }
 
+
 .content-list li a {
     transition: 0.3s;
     position: relative;
 }
 
-.content-list .active {
-    color: #28e98c;
+.content-list li a.active {
+    color: #50c878;
 }
+
+
 
 .content-list li a:hover {
     color: #28e98c;
@@ -449,7 +463,7 @@ h6 {
     top: -7%;
     left: -57px;
     font-size: 10px;
-    background-color: #28e98c;
+    background-color: hsl(0, 0%, 100%);
     padding: 8px;
     border-radius: 10px;
     transition: 0.3s;
@@ -459,13 +473,13 @@ h6 {
     content: '';
     width: 12px;
     height: 12px;
-    background: #28e98c;
+    background: #ffffff;
     position: absolute;
     right: -4px;
     top: 51%;
     transform: rotate(22deg) skew(-24deg, -340deg);
     margin-top: -5px;
-    z-index: -1;
+    z-index: 10000;
 }
 
 
@@ -478,7 +492,7 @@ h6 {
 /*section*/
 
 #section {
-    padding: 70px 30px;
+    padding: 30px;
 }
 
 .introduce {
@@ -1854,6 +1868,10 @@ select:focus {
         transition: 0.5s;
     }
 
+    #back-to-top {
+        display: none !important;
+    }
+
     .btn {
         margin: 0px auto;
         width: fit-content;
@@ -2061,8 +2079,12 @@ select:focus {
 @media screen and (min-width:1220px) {
 
     .setting-toggle {
-        left: 10px;
+        left: 0px;
         z-index: 1;
+    }
+
+    #back-to-top {
+        display: none !important;
     }
 
     .global-color-option {
@@ -2376,10 +2398,20 @@ select:focus {
 
 @media screen and (min-width:1520px) {
 
+    .setting-toggle {
+        left: 10px;
+        z-index: 1;
+    }
+
+
     .close-settings {
         font-size: 40px;
     }
 
+
+    .global-color-option {
+        overflow-y: hidden;
+    }
 
     .global-color-option h2 {
         font-size: 55px;
@@ -2389,8 +2421,8 @@ select:focus {
         font-size: 33px;
     }
 
-    .color-boxed{
-        margin-bottom: 155px
+    .color-boxed {
+        overflow-y: hidden;
     }
 
     .color-boxed a {
@@ -2399,8 +2431,8 @@ select:focus {
     }
 
     .color-boxed a::before {
-        width: calc(100% + 15px);
-        height: calc(100% + 15px);
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
     }
 
 

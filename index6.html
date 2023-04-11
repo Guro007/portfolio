@@ -29,6 +29,7 @@
             cursor: pointer;
             text-indent: -9999px;
             transition: 0.3;
+            z-index: 1;
         }
 
         #back-to-top:hover {
@@ -67,15 +68,16 @@
             <div class="global-color-option-inner">
                 <p>Colors</p>
                 <div class="color-boxed">
-                    <a href="#" class="clr-active active" onclick="setColor(this, '#28e98c;', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#fe6f1d', '#fff')"></a>
+                    <a href="#" class="clr-active active" onclick="setColor(this, '#28e98c', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#e4af12', '#fff')"></a>
+                    <a href="#" onclick="setColor(this, '#fe6f1d', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#14c5fd', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#c0c0c0', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#1338f3', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#f31313', '#fff')"></a>
                     <a href="#" onclick="setColor(this, '#ff99cc', '#fff')"></a>
                 </div>
+
                 <p>THREE DIMENSIONAL SHAPES</p>
                 <ul class="themes">
                     <li class="active"><a href="index.html">Earth Lines Sphere</a></li>
@@ -103,9 +105,9 @@
                         <img src="images/FB_IMG_1648906285441.jpg" alt="">
                     </div>
                     <div class="gmail">
-                        <a href="">imnadzegurami@gmail.com</a>
+                        <h6>imnadzegurami@gmail.com</h6>
                     </div>
-                    <h2 class="adress">Georgia, Lanchkhuti</h2>
+                    <h6 class="adress">Georgia, Lanchkhuti</h6>
                     <p class="copyright">© 2022 Drake. All Rights Reserved</p>
                     <ul class="social-media">
                         <li>
@@ -135,53 +137,53 @@
                     </button>
                 </div>
                 <div class="sidebar-content">
-                    <ul class="content-list">
-                        <li>
-                            <a href="#section">
+                    <ul class="content-list" id="list">
+                        <li class="links">
+                            <a class="active" href="#section" id="link-home">
                                 <span>Home</span>
                                 <i class="fa-solid fa-house active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section2">
                                 <span style="left: -58px;">About</span>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-user active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section3">
                                 <span style="left: -65px;">Resume</span>
-                                <i class="fa-regular fa-file"></i>
+                                <i class="fa-regular fa-file active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section4">
                                 <span style="left: -65px;">Services</span>
-                                <i class="fa-brands fa-servicestack"></i>
+                                <i class="fa-brands fa-servicestack active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section5">
                                 <span style="left: -55px;">Skills</span>
-                                <i class="fa-solid fa-list-ul"></i>
+                                <i class="fa-solid fa-list-ul active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section6">
                                 <span style="left: -73px;">Portfolios</span>
-                                <i class="fa-brands fa-creative-commons-nd"></i>
+                                <i class="fa-brands fa-creative-commons-nd active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section7">
                                 <span style="left: -95px;">Testimonials</span>
-                                <i class="fa-solid fa-teeth"></i>
+                                <i class="fa-solid fa-teeth active"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="links active">
                             <a href="#section10">
                                 <span style="left: -65px;">Contact</span>
-                                <i class="fa-sharp fa-regular fa-message"></i>
+                                <i class="fa-sharp fa-regular fa-message active"></i>
                             </a>
                         </li>
                     </ul>
@@ -193,7 +195,7 @@
         <!-- rigth-sidebar -->
         <div class="right-sidebar">
             <!-- section -->
-            <div id="section">
+            <section id="section" class="section1">
                 <div class="introduce" id="scroll-animation">
                     <i class="fa-solid fa-house active"></i>
                     <h2>INTRODUCE</h2>
@@ -222,10 +224,10 @@
                         <p>PROJECTS COMPLETED</p>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section -->
             <!-- section2 -->
-            <div id="section2">
+            <section id="section2" class="section2">
                 <div class="introduce" id="scroll-animation5">
                     <i class="fa-solid fa-user"></i>
                     <h2>ABOUT</h2>
@@ -245,10 +247,10 @@
                         working on improving my chopsone design problem at a time.
                     </p>
                 </div>
-            </div>
+            </section>
             <!-- end of section2 -->
             <!-- section3 -->
-            <div id="section3">
+            <section id="section3" class="section3">
                 <div class="introduce" id="scroll-animation8">
                     <i class="fa-regular fa-file"></i>
                     <h2>RESUME</h2>
@@ -289,10 +291,10 @@
                         <p>US RMIT University</p>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section3 -->
             <!-- section4 -->
-            <div id="section4">
+            <section id="section4" class="section4">
                 <div class="services">
                     <div class="introduce" id="scroll-animation11">
                         <i class="fa-brands fa-figma"></i>
@@ -328,10 +330,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section4 -->
             <!-- section5 -->
-            <div id="section5">
+            <section id="section5" class="section5">
                 <div class="skills-content">
                     <div class="introduce" id="scroll-animation16">
                         <i class="fa-solid fa-list-ul"></i>
@@ -399,10 +401,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section5 -->
             <!-- section6 -->
-            <div id="section6">
+            <section id="section6" class="section6">
                 <div class="portfolio">
                     <div class="introduce" id="scroll-animation24">
                         <i class="fa-brands fa-creative-commons-nd"></i>
@@ -450,10 +452,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section6 -->
             <!-- section7 -->
-            <div id="section7">
+            <section id="section7" class="section7">
                 <div class="testimonial">
                     <div class="introduce" id="scroll-animation30">
                         <i class="fa-solid fa-teeth"></i>
@@ -527,10 +529,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section7 -->
             <!-- section8 -->
-            <div id="section8">
+            <section id="section8">
                 <div class="brands">
                     <h5 id="scroll-animation34" style="color: white;">WORK WITH 60+ BRANDS WORLDWIDE</h5>
                     <div class="brands-content">
@@ -560,10 +562,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section8 -->
             <!-- section9 -->
-            <div id="section9">
+            <section id="section9">
                 <div class="pricing">
                     <div class="introduce" id="scroll-animation45">
                         <i class="fa-solid fa-dollar-sign"></i>
@@ -625,10 +627,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section9 -->
             <!--section10-->
-            <div id="section10">
+            <section id="section10" class="section8">
                 <div class="contact">
                     <div class="introduce" id="scroll-animation50">
                         <i class="fa-sharp fa-regular fa-message"></i>
@@ -699,7 +701,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end of section10 -->
         </div>
         <!-- end of right-sidebar -->
@@ -708,8 +710,43 @@
 
     <script src="assets/js/swiper-bundle.min.js"></script>
 
+   
 
     <script>
+        let section = document.querySelectorAll('section');
+        let links = document.querySelectorAll('.content-list li a');
+
+        window.onscroll = () => {
+
+            section.forEach(sec => {
+
+                let top = window.scrollY;
+                let offset = sec.offsetTop;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    links.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('.content-list li a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        };
+
+
+
+        // Get the active link in the content list
+        var activeLink = document.querySelector('.content-list li a.active');
+
+
+
+        // Update the color of the active link in the content list
+        if (activeLink) {
+            activeLink.style.color = textColor;
+        }
+
+
         function setColor(element, bgColor, textColor, beforeText, afterText) {
             // Remove the "active" class from all "a" tags in the "color-boxed" div
             var colorBoxedDiv = element.parentNode;
@@ -728,7 +765,32 @@
             // Set the before and after text of the clicked "a" tag
             element.setAttribute("data-before", beforeText);
             element.setAttribute("data-after", afterText);
+
+            // Change the color of all spans to match the background color of the clicked circle
+            var spans = document.getElementsByTagName("span");
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.color = bgColor;
+            }
+
+            var spans = document.getElementsByTagName("h2");
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.color = bgColor;
+            }
+
+            var spans = document.getElementsByClassName("btn");
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.backgroundColor = bgColor;
+            }
+
+            // // Set the active element color to the selected color from color-boxed
+            // var activeLinks = document.querySelectorAll(".content-list li a.active");
+            // for (var i = 0; i < activeLinks.length; i++) {
+            //     activeLinks[i].style.color = bgColor;
+            // }
+
         }
+
+
     </script>
 
 

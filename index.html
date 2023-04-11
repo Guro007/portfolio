@@ -710,7 +710,7 @@
 
     <script src="assets/js/swiper-bundle.min.js"></script>
 
-
+   
 
     <script>
         let section = document.querySelectorAll('section');
@@ -738,6 +738,8 @@
 
         // Get the active link in the content list
         var activeLink = document.querySelector('.content-list li a.active');
+
+
 
         // Update the color of the active link in the content list
         if (activeLink) {
@@ -780,12 +782,11 @@
                 spans[i].style.backgroundColor = bgColor;
             }
 
-            // Set the active element color to the selected color from color-boxed
-            var activeLinks = document.querySelectorAll(".content-list li a.active");
-            for (var i = 0; i < activeLinks.length; i++) {
-                activeLinks[i].style.color = bgColor;
-            }
-
+            // // Set the active element color to the selected color from color-boxed
+            // var activeLinks = document.querySelectorAll(".content-list li a.active");
+            // for (var i = 0; i < activeLinks.length; i++) {
+            //     activeLinks[i].style.color = bgColor;
+            // }
 
         }
 

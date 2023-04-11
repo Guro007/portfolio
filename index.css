@@ -231,6 +231,7 @@ h6 {
     color: #ffffff;
 }
 
+
 .head-text h1 {
     color: white;
     font-size: 30px;
@@ -445,11 +446,11 @@ h6 {
     position: relative;
 }
 
-/* .content-list li a.active {
+.content-list li a.active {
     color: #50c878;
 }
 
- */
+
 
 .content-list li a:hover {
     color: #28e98c;
@@ -1866,6 +1867,10 @@ select:focus {
         transition: 0.5s;
     }
 
+    #back-to-top {
+        display: none !important;
+    }
+
     .btn {
         margin: 0px auto;
         width: fit-content;
@@ -2077,7 +2082,9 @@ select:focus {
         z-index: 1;
     }
 
-
+    #back-to-top {
+        display: none !important;
+    }
 
     .global-color-option {
         padding: 134px;
