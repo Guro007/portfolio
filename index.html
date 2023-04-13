@@ -715,27 +715,29 @@
 
     <script>
         const htmlDocument = document.getElementById("html");
+        const body = document.body;
         const yellowButton = document.getElementById("yellow");
         const greenButton = document.getElementById("green");
 
-        yellowButton.addEventListener("click", () => makeActive(yellowButton , 'yellow-mode'));
-        greenButton.addEventListener("click", () => makeActive(greenButton , 'green-mode'));
+        yellowButton.addEventListener("click", () => makeActive(yellowButton , 'yellow-theme'));
+        greenButton.addEventListener("click", () => makeActive(greenButton , 'green-theme'));
 
         function makeActive(target,className){
-            htmlDocument.getElementclassList?.remove(...htmlDocument.classList);
-            htmlDocument.classList.add(className);
+            console.log(body.getElementclassList);
+            body.classList?.remove(...body.classList);
+            body.classList.add(className);
             document.querySelector('.color-boxed a.active').classList.remove('active');
             target.classList.add('active');
         }
 
 
 
-        var label = document.getElementById("yellow");
+        // var label = document.getElementById("yellow");
 
 
-        label.onclick = function () {
-            document.body.classList.toggle("yellow-theme");
-        }
+        // label.onclick = function () {
+        //     document.body.classList.toggle("yellow-theme");
+        // }
 
 
     </script>

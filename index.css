@@ -17,7 +17,7 @@ body {
 }
 
 body.green-theme{
-    --primary-color: #28e98c;
+    --primary-color: #28e98c !important;
 }
 
 body.yellow-theme{
@@ -108,7 +108,7 @@ body.orange-mode span{
 
 
 .global-color-option h2 {
-    color: #fff;
+    color: var(--primary-color);
     font-weight: 200;
     font-size: 34px;
     line-height: 1.2;
@@ -395,7 +395,7 @@ h6 {
 
 
 .left-sidebar h2 {
-    color: white;
+    color: var(--primary-color);
     padding-top: 10px;
     font-weight: 100;
 }
@@ -1903,6 +1903,10 @@ select:focus {
         transition: 0.5s;
     }
 
+    .left-sidebar:hover{
+        border-color: var(--primary-color);
+    }
+
     #back-to-top {
         display: none !important;
     }
@@ -2141,6 +2145,7 @@ select:focus {
     .global-color-option h2 {
         font-size: 44px;
         margin-bottom: 80px;
+        color: var(--primary-color);
     }
 
 
@@ -2450,6 +2455,7 @@ select:focus {
 
     .global-color-option h2 {
         font-size: 55px;
+        color: var(--primary-color);
     }
 
     .global-color-option p {
