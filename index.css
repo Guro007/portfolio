@@ -13,6 +13,8 @@ body {
 }
 
 
+  
+  
 
 .setting-toggle {
     position: fixed;
@@ -25,6 +27,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     background: #1e1d1d;
+    z-index: 1;
 }
 
 .global-color-option {
@@ -274,9 +277,6 @@ h6 {
     transition: 0.5s;
 }
 
-.left-sidebar:hover {
-    border-color: #28e98c;
-}
 
 .logo {
     position: relative;
@@ -417,10 +417,9 @@ h6 {
 }
 
 .btn:hover {
-    color: #28e98c;
-    background: transparent;
-    box-shadow: inset 0 0 0 2px #28e98c;
+   transform: scale(105%);
 }
+
 
 
 .sidebar-content {
@@ -449,7 +448,6 @@ h6 {
 .content-list li a.active {
     color: #50c878;
 }
-
 
 
 .content-list li a:hover {
@@ -797,9 +795,6 @@ h6 {
     font-size: 15px;
 }
 
-.inner:hover h1 {
-    color: #28e98c;
-}
 
 .inner img {
     width: 100%;
@@ -812,10 +807,6 @@ h6 {
     overflow: hidden;
 }
 
-.hover:hover {
-    border: 1px solid #28e98c;
-    transition: 0.3s;
-}
 
 .hover:hover img {
     transform: scale(105%);

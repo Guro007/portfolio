@@ -712,6 +712,54 @@
 
    
 
+    
+    <script>
+        function setColor(element, bgColor, textColor) {
+
+            // Change the text color of the clicked element
+            element.style.color = textColor;
+
+            // Get all the elements you want to apply the new color to
+            let elementsToColor = document.querySelectorAll('span, h2, btn');
+
+            // Loop through each element and apply the new color
+            elementsToColor.forEach(function (element) {
+                element.style.color = bgColor;
+            });
+
+
+
+            var colorBoxedDiv = element.parentNode;
+            var colorBoxedLinks = colorBoxedDiv.getElementsByTagName("a");
+            for (var i = 0; i < colorBoxedLinks.length; i++) {
+                colorBoxedLinks[i].classList.remove("active");
+            }
+
+
+            var spans = document.getElementsByClassName("btn");
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.backgroundColor = bgColor;
+            }
+
+            // Add the "active" class to the clicked "a" tag
+            element.classList.add("active");
+
+            // Set the background and text color of the clicked "a" tag
+            element.style.backgroundColor = bgColor;
+            element.style.color = textColor;
+
+            // Set the before and after text of the clicked "a" tag
+            element.setAttribute("data-before", beforeText);
+            element.setAttribute("data-after", afterText);
+
+        }
+
+
+    </script>
+
+
+
+
     <script>
         let section = document.querySelectorAll('section');
         let links = document.querySelectorAll('.content-list li a');
@@ -733,64 +781,6 @@
                 };
             });
         };
-
-
-
-        // Get the active link in the content list
-        var activeLink = document.querySelector('.content-list li a.active');
-
-
-
-        // Update the color of the active link in the content list
-        if (activeLink) {
-            activeLink.style.color = textColor;
-        }
-
-
-        function setColor(element, bgColor, textColor, beforeText, afterText) {
-            // Remove the "active" class from all "a" tags in the "color-boxed" div
-            var colorBoxedDiv = element.parentNode;
-            var colorBoxedLinks = colorBoxedDiv.getElementsByTagName("a");
-            for (var i = 0; i < colorBoxedLinks.length; i++) {
-                colorBoxedLinks[i].classList.remove("active");
-            }
-
-            // Add the "active" class to the clicked "a" tag
-            element.classList.add("active");
-
-            // Set the background and text color of the clicked "a" tag
-            element.style.backgroundColor = bgColor;
-            element.style.color = textColor;
-
-            // Set the before and after text of the clicked "a" tag
-            element.setAttribute("data-before", beforeText);
-            element.setAttribute("data-after", afterText);
-
-            // Change the color of all spans to match the background color of the clicked circle
-            var spans = document.getElementsByTagName("span");
-            for (var i = 0; i < spans.length; i++) {
-                spans[i].style.color = bgColor;
-            }
-
-            var spans = document.getElementsByTagName("h2");
-            for (var i = 0; i < spans.length; i++) {
-                spans[i].style.color = bgColor;
-            }
-
-            var spans = document.getElementsByClassName("btn");
-            for (var i = 0; i < spans.length; i++) {
-                spans[i].style.backgroundColor = bgColor;
-            }
-
-            // // Set the active element color to the selected color from color-boxed
-            // var activeLinks = document.querySelectorAll(".content-list li a.active");
-            // for (var i = 0; i < activeLinks.length; i++) {
-            //     activeLinks[i].style.color = bgColor;
-            // }
-
-        }
-
-
     </script>
 
 
@@ -819,6 +809,14 @@
         document.addEventListener("DOMContentLoaded", function (event) {
             var globalColorOption = document.querySelector('.global-color-option');
             globalColorOption.style.display = 'none';
+        });
+
+
+        // Set the first element as active and call its function when the page is loaded
+        window.addEventListener('load', function () {
+            const firstElement = document.querySelector('.color-boxed a:first-child');
+            firstElement.classList.add('active');
+            setColor(firstElement, '#28e98c', '#fff');
         });
 
     </script>
