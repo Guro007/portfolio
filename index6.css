@@ -708,7 +708,7 @@ h6 {
     border-radius: 50%;
     left: 1.5px;
     top: 7px;
-    transition: .3s;
+    transition: .5s;
 }
 
 .slider::after {
@@ -734,7 +734,7 @@ h6 {
     color: #999999;
     font-size: 20px;
     font-weight: 100;
-    transition: .3s;
+    transition: .5s;
 }
 
 
@@ -1417,7 +1417,6 @@ select:focus {
 #scroll-animation13 {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #scroll-animation13.visible {
@@ -1428,7 +1427,6 @@ select:focus {
 #scroll-animation14 {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #scroll-animation14.visible {
@@ -1439,7 +1437,6 @@ select:focus {
 #scroll-animation15 {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 0.8s ease-in-out;
 }
 
 #scroll-animation15.visible {
@@ -1802,7 +1799,6 @@ select:focus {
 #scroll-animation48 {
     opacity: 0;
     transform: translateX(-170px);
-    transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
 }
 
 #scroll-animation48.visible {
@@ -2151,7 +2147,6 @@ select:focus {
     #scroll-animation48 {
         opacity: 0;
         transform: translateX(270px);
-        transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
     }
 
     #scroll-animation48.visible {
@@ -2477,7 +2472,6 @@ select:focus {
     #scroll-animation48 {
         opacity: 0;
         transform: translateX(270px);
-        transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
     }
 
     #scroll-animation48.visible {
