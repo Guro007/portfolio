@@ -13,8 +13,96 @@ body {
     background-color: black;
 }
 
+:root{
+    --primary-color: #28e98c;
+}
+
+body.green-theme{
+    --primary-color: #28e98c;
+}
+
+body.yellow-theme{
+    --primary-color: #e4af12;
+}
+
+body.orange-theme{
+    --primary-color:  #fe6f1d ;
+}
 
 
+body.light-blue-theme{
+    --primary-color:  #14c5fd ;
+}
+
+
+body.grey-theme{
+    --primary-color:  #c0c0c0;
+}
+
+
+body.blue-theme{
+    --primary-color:  #1338f3;
+}
+
+body.red-theme{
+    --primary-color:#f31313;
+}
+
+body.pink-theme{
+    --primary-color:#ff99cc;
+} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: smooth;
+}
+
+:root{
+    --primary-color: #28e98c;
+}
+
+body.green-theme{
+    --primary-color: #28e98c;
+}
+
+body.yellow-theme{
+    --primary-color: #e4af12;
+}
+
+body.orange-theme{
+    --primary-color:  #fe6f1d ;
+}
+
+
+body.light-blue-theme{
+    --primary-color:  #14c5fd ;
+}
+
+
+body.grey-theme{
+    --primary-color:  #c0c0c0;
+}
+
+ 
+body.blue-theme{
+    --primary-color:  #1338f3;
+}
+
+body.red-theme{
+    --primary-color:#f31313;
+}
+
+body.pink-theme{
+    --primary-color:#ff99cc;
+}
 .setting-toggle {
     position: fixed;
     top: 65px;
@@ -59,12 +147,15 @@ body {
     top: 40px;
     color: #fff;
     font-size: 20px;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
 
+
+
 .global-color-option h2 {
-    color: #fff;
+    color: var(--primary-color);
     font-weight: 200;
     font-size: 34px;
     line-height: 1.2;
@@ -95,7 +186,7 @@ body {
     height: 30px;
     border-radius: 50%;
     position: relative;
-    background: #28e98c;
+    background: #28e98c
 }
 
 .color-boxed a::before {
@@ -145,7 +236,7 @@ body {
 }
 
 .color-boxed a.clr-active.active {
-    background-color: #28e98c;
+    background-color: var(--primary-color);
     border-color: #fff;
 }
 
@@ -228,10 +319,7 @@ h5 {
     font-size: 15px;
 }
 
-h6 {
-    font-size: 18px;
-    color: #ffffff;
-}
+
 
 
 .head-text h1 {
@@ -242,7 +330,7 @@ h6 {
 }
 
 .head-text span {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .container {
@@ -275,6 +363,10 @@ h6 {
     overflow: hidden;
     transition: 0.5s;
 }
+
+ .left-sidebar:hover{
+        border-color: var(--primary-color);
+    }
 
 
 .logo {
@@ -347,9 +439,14 @@ h6 {
     text-decoration: none;
 }
 
+h6 {
+    font-size: 18px;
+    color:var(--primary-color);
+}
+
 
 .left-sidebar h2 {
-    color: white;
+    color: var(--primary-color);
     padding-top: 10px;
     font-weight: 100;
 }
@@ -391,7 +488,7 @@ h6 {
 
 .btn {
     width: 100%;
-    background-color: #28e98c;
+    background-color: var(--primary-color);
     padding: 15px 18px 15px 18px;
     margin: 0 auto;
     display: flex;
@@ -399,7 +496,7 @@ h6 {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    border: none;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: 0.5s;
     overflow: hidden;
@@ -416,8 +513,12 @@ h6 {
 }
 
 .btn:hover {
-   transform: scale(105%);
+    transition: 0.5s;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
 }
+
 
 
 .sidebar-content {
@@ -444,13 +545,12 @@ h6 {
 }
 
 .content-list li a.active {
-    color: #50c878;
+    color: var(--primary-color);
 }
 
 
-
 .content-list li a:hover {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .content-list span {
@@ -504,7 +604,7 @@ h6 {
 }
 
 .introduce h2 {
-    color: #eee9e9;
+    color: var(--primary-color);
     font-weight: 100;
     font-size: 13px;
     letter-spacing: 3px;
@@ -513,7 +613,7 @@ h6 {
 
 
 .introduce-me span {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 
@@ -563,7 +663,7 @@ h6 {
 
 .facts span {
     font-size: 50px;
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .facts p {
@@ -623,11 +723,11 @@ h6 {
 }
 
 .slider:hover h3 {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .slider:hover::before {
-    background: #28e98c;
+    background: var(--primary-color);
 }
 
 .slider h3 {
@@ -667,7 +767,7 @@ h6 {
 }
 
 .specializations span {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .spec-head {
@@ -687,7 +787,7 @@ h6 {
 }
 
 .spec-content:hover {
-    border-color: #28e98c;
+    border-color: var(--primary-color);
 }
 
 .spec-content:hover h6 {
@@ -712,7 +812,7 @@ h6 {
 }
 
 .advantages span {
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .outer-cont {
@@ -738,7 +838,7 @@ h6 {
 }
 
 .inner-cont:hover {
-    border-color: #28e98c;
+    border-color: var(--primary-color);
 }
 
 .skill-cont {
@@ -755,7 +855,7 @@ h6 {
 }
 
 .skill-cont span {
-    color: #28e98c;
+    color: var(--primary-color);
     font-size: 30px;
 }
 
@@ -845,13 +945,13 @@ h6 {
 
 
 .prev:hover {
-    border-color: #28e98c;
-    color: #28e98c;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .next:hover {
-    border-color: #28e98c;
-    color: #28e98c;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 #testimonial-slide-count {
@@ -897,7 +997,7 @@ h6 {
 }
 
 .testimonial-item-inner:hover {
-    border-color: #28e98c;
+    border-color: var(--primary-color);
 }
 
 .testimonial-item-inner p {
@@ -963,7 +1063,7 @@ h6 {
 }
 
 .pricing-table:hover {
-    border-color: #28e98c;
+    border-color: var(--primary-color);
 }
 
 .pricing-inner {
@@ -997,7 +1097,7 @@ h6 {
 .pricing-table h2 {
     font-size: 50px;
     font-weight: 100;
-    color: #28e98c;
+    color: var(--primary-color);
 }
 
 .pricing-table span {
@@ -1025,7 +1125,7 @@ h6 {
 }
 
 .pricing-footer span {
-    color: #28e98c;
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
@@ -1151,7 +1251,7 @@ select:focus {
     height: 300px;
     padding: 30px;
     color: rgb(255, 255, 255);
-    background-color: #28e98c;
+    background-color: var(--primary-color);
     border-radius: 15px;
     text-align: center;
     display: flex;
@@ -1857,6 +1957,7 @@ select:focus {
         transition: 0.5s;
     }
 
+   
     #back-to-top {
         display: none !important;
     }
@@ -2095,6 +2196,7 @@ select:focus {
     .global-color-option h2 {
         font-size: 44px;
         margin-bottom: 80px;
+        color: var(--primary-color);
     }
 
 
@@ -2404,6 +2506,7 @@ select:focus {
 
     .global-color-option h2 {
         font-size: 55px;
+        color: var(--primary-color);
     }
 
     .global-color-option p {

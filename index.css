@@ -1,3 +1,55 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: smooth;
+}
+
+:root{
+    --primary-color: #28e98c;
+}
+
+body.green-theme{
+    --primary-color: #28e98c;
+}
+
+body.yellow-theme{
+    --primary-color: #e4af12;
+}
+
+body.orange-theme{
+    --primary-color:  #fe6f1d ;
+}
+
+
+body.light-blue-theme{
+    --primary-color:  #14c5fd ;
+}
+
+
+body.grey-theme{
+    --primary-color:  #c0c0c0;
+}
+
+
+body.blue-theme{
+    --primary-color:  #1338f3;
+}
+
+body.red-theme{
+    --primary-color:#f31313;
+}
+
+body.pink-theme{
+    --primary-color:#ff99cc;
+} 
 * {
     margin: 0;
     padding: 0;
@@ -17,45 +69,39 @@ body {
 }
 
 body.green-theme{
-    --primary-color: #28e98c !important;
+    --primary-color: #28e98c;
 }
 
 body.yellow-theme{
-    --primary-color: #e4af12 !important;
+    --primary-color: #e4af12;
 }
 
 body.orange-theme{
-    --primary-color:  #fe6f1d;
+    --primary-color:  #fe6f1d ;
 }
 
-.light-blue{
-    --primary-color:  #14c5fd;
+
+body.light-blue-theme{
+    --primary-color:  #14c5fd ;
 }
 
-.grey-theme{
+
+body.grey-theme{
     --primary-color:  #c0c0c0;
 }
 
-.blue-theme{
+ 
+body.blue-theme{
     --primary-color:  #1338f3;
 }
 
-.red-theme{
+body.red-theme{
     --primary-color:#f31313;
 }
 
-.pink-theme{
+body.pink-theme{
     --primary-color:#ff99cc;
 }
-
-body.yellow-mode span{
-   color: var(--primary-color);
-}
-
-body.orange-mode span{
-    color: var(--primary-color);
-}
-
 .setting-toggle {
     position: fixed;
     top: 65px;
@@ -317,6 +363,10 @@ h5 {
     transition: 0.5s;
 }
 
+ .left-sidebar:hover{
+        border-color: var(--primary-color);
+    }
+
 
 .logo {
     position: relative;
@@ -390,7 +440,7 @@ h5 {
 
 h6 {
     font-size: 18px;
-    color:var(--primary-color);
+    color:white;
 }
 
 
@@ -445,7 +495,7 @@ h6 {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    border: none;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: 0.5s;
     overflow: hidden;
@@ -462,7 +512,10 @@ h6 {
 }
 
 .btn:hover {
-   transform: scale(105%);
+    transition: 0.5s;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
 }
 
 
@@ -550,7 +603,7 @@ h6 {
 }
 
 .introduce h2 {
-    color: #eee9e9;
+    color: var(--primary-color);
     font-weight: 100;
     font-size: 13px;
     letter-spacing: 3px;
@@ -729,7 +782,7 @@ h6 {
     padding: 30px;
     border: 1px solid gray;
     border-radius: 15px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .spec-content:hover {
@@ -1903,10 +1956,7 @@ select:focus {
         transition: 0.5s;
     }
 
-    .left-sidebar:hover{
-        border-color: var(--primary-color);
-    }
-
+   
     #back-to-top {
         display: none !important;
     }

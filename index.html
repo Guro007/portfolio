@@ -718,11 +718,25 @@
         const body = document.body;
         const yellowButton = document.getElementById("yellow");
         const greenButton = document.getElementById("green");
+        const orangeButton = document.getElementById("orange");
+        const lightblueButton = document.getElementById("light-blue");
+        const greyButton = document.getElementById("grey");
+        const blueButton = document.getElementById("blue");
+        const redButton = document.getElementById("red");
+        const pinkButton = document.getElementById("pink");
 
-        yellowButton.addEventListener("click", () => makeActive(yellowButton , 'yellow-theme'));
-        greenButton.addEventListener("click", () => makeActive(greenButton , 'green-theme'));
 
-        function makeActive(target,className){
+        yellowButton.addEventListener("click", () => makeActive(yellowButton, 'yellow-theme'));
+        greenButton.addEventListener("click", () => makeActive(greenButton, 'green-theme'));
+        orangeButton.addEventListener("click", () => makeActive(orangeButton, 'orange-theme'));
+        lightblueButton.addEventListener("click", () => makeActive(lightblueButton, 'light-blue-theme'));
+        greyButton.addEventListener("click", () => makeActive(greyButton, 'grey-theme'));
+        blueButton.addEventListener("click", () => makeActive(blueButton, 'blue-theme'));
+        redButton.addEventListener("click", () => makeActive(redButton, 'red-theme'));
+        pinkButton.addEventListener("click", () => makeActive(pinkButton, 'pink-theme'));
+
+
+        function makeActive(target, className) {
             console.log(body.getElementclassList);
             body.classList?.remove(...body.classList);
             body.classList.add(className);
@@ -732,40 +746,9 @@
 
 
 
-        // var label = document.getElementById("yellow");
-
-
-        // label.onclick = function () {
-        //     document.body.classList.toggle("yellow-theme");
-        // }
-
 
     </script>
 
-
-
-
-<!-- 
-     <script>
-        function setColor(element, bgColor, textColor) {
-            // Get all the elements you want to apply the new color to
-
-
-            // Add the "active" class to the clicked "a" tag
-            element.classList.add("active");
-
-            // Set the background and text color of the clicked "a" tag
-            element.style.backgroundColor = bgColor;
-            element.style.color = textColor;
-
-            // // Set the before and after text of the clicked "a" tag
-            // element.setAttribute("data-before", beforeText);
-            // element.setAttribute("data-after", afterText);
-
-        }
- 
-
-    </script> -->
 
 
 

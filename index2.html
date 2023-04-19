@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -68,16 +68,15 @@
             <div class="global-color-option-inner">
                 <p>Colors</p>
                 <div class="color-boxed">
-                    <a href="#" class="clr-active active" onclick="setColor(this, '#28e98c', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#e4af12', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#fe6f1d', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#14c5fd', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#c0c0c0', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#1338f3', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#f31313', '#fff')"></a>
-                    <a href="#" onclick="setColor(this, '#ff99cc', '#fff')"></a>
+                    <a id="green" class="active" href="#" onclick="Color('var(--primary-color)')"></a>
+                    <a id="yellow" href="#" onclick="Color('#e4af12')"></a>
+                    <a id="orange" href="#" onclick="Color('#fe6f1d')"></a>
+                    <a id="light-blue" href="#" onclick="Color('#14c5fd')"></a>
+                    <a id="grey" href="#" onclick="Color('#c0c0c0')"></a>
+                    <a id="blue" href="#" onclick="Color('#1338f3')"></a>
+                    <a id="red" href="#" onclick="Color('#f31313')"></a>
+                    <a id="pink" href="#" onclick="Color('#ff99cc')"></a>
                 </div>
-
                 <p>THREE DIMENSIONAL SHAPES</p>
                 <ul class="themes">
                     <li class="active"><a href="index.html">Earth Lines Sphere</a></li>
@@ -307,7 +306,7 @@
                         <div class="spec-content" id="scroll-animation13">
                             <div class="spec-head">
                                 <h2>Website Design</h2>
-                                <i class="fa-brands fa-phoenix-framework" style="color:#28e98c"></i>
+                                <i class="fa-brands fa-phoenix-framework" style="color:var(--primary-color)"></i>
                             </div>
                             <p>I created digital products with unique ideas use Figma And Framer</p>
                             <h6>24 PROJECTS</h6>
@@ -315,7 +314,7 @@
                         <div class="spec-content" id="scroll-animation14">
                             <div class="spec-head">
                                 <h2>Development</h2>
-                                <i class="fa-solid fa-paperclip" style="color:#28e98c"></i>
+                                <i class="fa-solid fa-paperclip" style="color:var(--primary-color)"></i>
                             </div>
                             <p>I build website go live with Framer, Webflow or WordPress</p>
                             <h6>126 PROJECTS</h6>
@@ -323,7 +322,7 @@
                         <div class="spec-content" id="scroll-animation15">
                             <div class="spec-head">
                                 <h2>SEO/Marketing</h2>
-                                <i class="fa-brands fa-windows" style="color:#28e98c"></i>
+                                <i class="fa-brands fa-windows" style="color:var(--primary-color)"></i>
                             </div>
                             <p>Increase the traffic for your website with SEO optimized</p>
                             <h6>8 PROJECTS</h6>
@@ -694,7 +693,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <button type="submit" onclick="alert()" class="btn"
+                            <button type="submit" onclick="alert()" class="btn" id="button3"
                                 style="width:250px; margin-top: 20px; margin-left: 0;">SEND
                                 MESSAGE
                             </button>
@@ -710,52 +709,46 @@
 
     <script src="assets/js/swiper-bundle.min.js"></script>
 
-   
 
-    
+
+
+
     <script>
-        function setColor(element, bgColor, textColor) {
-
-            // Change the text color of the clicked element
-            element.style.color = textColor;
-
-            // Get all the elements you want to apply the new color to
-            let elementsToColor = document.querySelectorAll('span, h2, btn');
-
-            // Loop through each element and apply the new color
-            elementsToColor.forEach(function (element) {
-                element.style.color = bgColor;
-            });
+        const htmlDocument = document.getElementById("html");
+        const body = document.body;
+        const yellowButton = document.getElementById("yellow");
+        const greenButton = document.getElementById("green");
+        const orangeButton = document.getElementById("orange");
+        const lightblueButton = document.getElementById("light-blue");
+        const greyButton = document.getElementById("grey");
+        const blueButton = document.getElementById("blue");
+        const redButton = document.getElementById("red");
+        const pinkButton = document.getElementById("pink");
 
 
+        yellowButton.addEventListener("click", () => makeActive(yellowButton, 'yellow-theme'));
+        greenButton.addEventListener("click", () => makeActive(greenButton, 'green-theme'));
+        orangeButton.addEventListener("click", () => makeActive(orangeButton, 'orange-theme'));
+        lightblueButton.addEventListener("click", () => makeActive(lightblueButton, 'light-blue-theme'));
+        greyButton.addEventListener("click", () => makeActive(greyButton, 'grey-theme'));
+        blueButton.addEventListener("click", () => makeActive(blueButton, 'blue-theme'));
+        redButton.addEventListener("click", () => makeActive(redButton, 'red-theme'));
+        pinkButton.addEventListener("click", () => makeActive(pinkButton, 'pink-theme'));
 
-            var colorBoxedDiv = element.parentNode;
-            var colorBoxedLinks = colorBoxedDiv.getElementsByTagName("a");
-            for (var i = 0; i < colorBoxedLinks.length; i++) {
-                colorBoxedLinks[i].classList.remove("active");
-            }
 
-
-            var spans = document.getElementsByClassName("btn");
-            for (var i = 0; i < spans.length; i++) {
-                spans[i].style.backgroundColor = bgColor;
-            }
-
-            // Add the "active" class to the clicked "a" tag
-            element.classList.add("active");
-
-            // Set the background and text color of the clicked "a" tag
-            element.style.backgroundColor = bgColor;
-            element.style.color = textColor;
-
-            // Set the before and after text of the clicked "a" tag
-            element.setAttribute("data-before", beforeText);
-            element.setAttribute("data-after", afterText);
-
+        function makeActive(target, className) {
+            console.log(body.getElementclassList);
+            body.classList?.remove(...body.classList);
+            body.classList.add(className);
+            document.querySelector('.color-boxed a.active').classList.remove('active');
+            target.classList.add('active');
         }
 
 
+
+
     </script>
+
 
 
 
@@ -816,7 +809,7 @@
         window.addEventListener('load', function () {
             const firstElement = document.querySelector('.color-boxed a:first-child');
             firstElement.classList.add('active');
-            setColor(firstElement, '#28e98c', '#fff');
+            Color(firstElement, 'var(--primary-color)', '#fff');
         });
 
     </script>
@@ -963,6 +956,8 @@
         slideCount.innerHTML = `<span class="left">${currentIndex + 1}</span> / 3`;
 
     </script>
+
+
 
 
 
