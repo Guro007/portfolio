@@ -1788,7 +1788,6 @@ select:focus {
 #scroll-animation47 {
     opacity: 0;
     transform: translateX(170px);
-    transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
 }
 
 #scroll-animation47.visible {
@@ -2136,7 +2135,6 @@ select:focus {
     #scroll-animation47 {
         opacity: 0;
         transform: translateX(-270px);
-        transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
     }
 
     #scroll-animation47.visible {
@@ -2461,7 +2459,6 @@ select:focus {
     #scroll-animation47 {
         opacity: 0;
         transform: translateX(-270px);
-        transition: opacity 0.5s ease-in-out, transform .8s ease-in-out;
     }
 
     #scroll-animation47.visible {
